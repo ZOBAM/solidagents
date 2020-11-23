@@ -1,0 +1,31 @@
+<section>
+  <div class="mat-headline">Genuine Land for Sale/Lease</div>
+  <div class="card-container"
+  fxLayout
+  fxLayout.xs = "column"
+  >
+      <div *ngFor="let property of properties"
+        fxFlex.xs='100%'
+        fxFlex.sm="50%"
+        fxFlex.md="33%"
+        fxFlex.gt-md="25%">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              {{property.title}}
+            </mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="getPropertyImg(property)" style="max-width: 100%;">
+          <mat-card-content >
+            <p>{{property.desc}}</p>
+          </mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-card-actions>
+            <button mat-raised-button>Like</button>
+            <button mat-raised-button>Share</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+  </div>
+</section>
+

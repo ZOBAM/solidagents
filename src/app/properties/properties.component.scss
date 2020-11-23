@@ -1,0 +1,36 @@
+.error{
+  color: red; border: 2px solid hotpink; padding: 4px; text-align: center; font-style: italic;;
+}
+mat-headline{
+  text-align: center;
+}
+img{
+  display: block; margin: auto;
+}
+ .card-container{
+  //@at-root: flex;
+  flex-wrap: wrap;
+  div{
+    box-sizing: border-box;
+    padding: 0px 2px 2px 2px;
+    /*flex:25%;
+    max-width: 25%; */
+    img{
+      max-width: 100%;
+    }
+  }
+}
+mat-card{
+  //max-width: 400px;
+}
+
+/* @media screen and (min-width:700px){
+  .card-container{
+    div{
+      max-width: 25%;
+      img{
+        max-width: 150px;
+      }
+    }
+  }
+} */

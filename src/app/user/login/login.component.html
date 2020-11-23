@@ -1,0 +1,16 @@
+<div class="login-form-container">
+  <p *ngIf = 'isLoggedIn'>
+    This person {{user.first_name}} is already logged.
+  </p>
+  <mat-form-field apppearance = "fill">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)] = 'email'>
+  </mat-form-field>
+  <mat-form-field apppearance = "fill">
+    <mat-label>Password</mat-label>
+    <input matInput [(ngModel)] = 'password'>
+  </mat-form-field>
+  <button (click) = 'login()'>Login</button>
+  <mat-divider></mat-divider>
+  {{email}} : {{password}}
+</div>

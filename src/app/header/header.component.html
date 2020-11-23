@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+  <div fxHide.gt-xs>
+      <button mat-icon-button (click)="onToggleSidenav()">
+          <mat-icon>menu</mat-icon>
+      </button>
+  </div>
+  <div>
+      <a routerLink="">Solid Agents</a>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+          <li>
+              <a routerLink="/sagit">Sag It</a>
+          </li>
+          <li>
+              <a routerLink="/how-it-works">How It Works</a>
+          </li>
+          <li>
+              <a routerLink="/about-sa">About Us</a>
+          </li>
+          <li [matMenuTriggerFor]="menu">
+            <span *ngIf = "status">
+              <a>{{getUser().first_name}}</a>
+            </span>
+            <span *ngIf = "!status">
+              <a>User</a>
+            </span>
+          </li>
+          <mat-menu #menu="matMenu" xPosition="after">
+            <a *ngIf="!status" routerLink="/login"><button mat-menu-item>Login</button></a>
+            <a *ngIf="!status"  routerLink="/signup"><button mat-menu-item>Register</button></a>
+            <a *ngIf="status"  routerLink="/user"><button mat-menu-item>User Area</button></a>
+            <a *ngIf="status"  routerLink="/logout"><button mat-menu-item>Logout</button></a>
+          </mat-menu>
+      </ul>
+  </div>
+</mat-toolbar>
